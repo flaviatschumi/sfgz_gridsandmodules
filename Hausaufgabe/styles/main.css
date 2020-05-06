@@ -1,0 +1,78 @@
+html {
+  background-color: red;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+
+
+
+
+
+body {
+  background-color: var(--red);
+
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--black);
+
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.en-title,
+.de-title {
+  font-size: 6rem;
+}
+
+.raster {
+  margin: 0 auto;
+  max-width: 60rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr repeat(8, minmax(min-content, 7rem)) 1fr;
+  grid-gap: 1.5rem;
+  min-height: 100vh;
+}
+
+.autor {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+}
+
+.en-title {
+  grid-column: 1 / span 4;
+  grid-row: 3;
+}
+
+.en-subtitle {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}
+
+.en-desc {
+  grid-column: 3 / span 2;
+  grid-row: 4;
+}
+
+.de-title {
+  grid-column: 1 / span 4;
+  grid-row: 5;
+}
+
+.de-subtitle {
+  grid-column: 1 / span 2;
+  grid-row: 6;
+}
+
+.de-desc {
+  grid-column: 3 / span 2;
+  grid-row: 6;
+}
+
+.publisher {
+  grid-column: 3;
+  grid-row: 8;
+  justify-self: start;
+  align-self: end;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Transitions</title>
+
+    <style>
+
+    html {
+      background-color: lightblue;
+    }
+
+    .animated-text {
+ font-family: monospace;
+ overflow: hidden;
+ height:1.1em;
+ word-wrap: break-word;
+ white-space: nowrap;
+ animation: typing 4s steps(48) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 48ch;
+  }
+}
+    </style>
+
+
+  </head>
+  <body>
+
+
+<h1 class="animated-text">He doesn‘t fight crime or wear a cape</h1>
+<h1 class="animated-text">He doesn‘t read minds or levitate</h1>
+
+
+
+  </body>
+</html>

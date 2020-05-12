@@ -1,0 +1,32 @@
+/* html {
+}
+
+
+body {
+  background-color: lightblue;
+  font-size: 16px;
+
+}
+p {
+  display: flex;
+  flex-direction: column;
+} */
+
+
+p {
+  font-size: 20px
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

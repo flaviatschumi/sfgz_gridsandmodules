@@ -1,0 +1,52 @@
+html {
+  background-color: lightblue;
+  font-size: 30px;
+  font-family: Helvetica, Arial, Sans-serif;
+}
+
+
+body {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  margin-left: 4.5em;
+  margin-right: 2.5em;
+  margin-top: 2.5em;
+  margin-bottom: 4.5em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.raster {
+  display: grid;
+  grid-template-rows: 200px: 200px;
+  grid-template-columns: 200px 200px 200px;
+  grid-auto-flow: row;
+  margin: auto;
+}
+
+
+@@media screen and (max-width 48em) {
+  body{
+    background-color: darkblue;
+  }
+  .raster div {
+    color: red;
+  }
+.raster .S {
+  grid-area: 1 / 1 / 2 / 2
+}
+.raster .I {
+  grid-area: 1 / 2 / 2 / 2
+}
+.raster .T {
+  grid-area: 2 / 3 / 3 / 4
+}
+
+
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Grids</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+<style>
+
+
+.item1 { grid-area: header;
+  font-size: 60px;
+}
+.item2 { grid-area: menu;
+  font-size: 50px;
+  text-align: left; vertical-align: top;
+
+}
+.item3 { grid-area: main;
+  font-size: 20px;
+ }
+.item4 { grid-area: right;
+  font-size: 30px;
+}
+.item5 { grid-area: footer;
+  font-size: 20px;
+}
+
+.grid-container {
+  grid-column: 3;
+  display: grid;
+  grid-template-areas:
+  'header header header'
+  'menu main right'
+  'menu footer footer';
+  grid-gap: 30px;
+  /* background-color: #2196F3; */
+  padding: 30px;
+}
+
+.grid-container > div {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  text-align: center;
+  padding: 80px 0;
+  /* font-size: 60px; */
+  font-family: sans-serif;
+}
+
+
+
+
+</style>
+
+  </head>
+  <body>
+
+
+
+    <div class="grid-container">
+      <div class="item1">He </div>
+      <div class="item2">dosen't</div>
+      <div class="item3">fight</div>
+      <div class="item4">crime</div>
+      <div class="item5">or wear a cape</div>
+    </div>
+
+
+
+
+  </body>
+
+
+
+
+</html>

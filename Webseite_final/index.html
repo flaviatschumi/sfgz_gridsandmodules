@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Grid</title>
+    <style>
+        body > * {
+            /* margin: 4px; */
+            padding: 20px;
+            /* border-radius: 7px; */
+            font-family: sans-serif;
+        }
+
+
+        h2 {
+          color: black;
+        }
+
+
+        h3 {
+          color: white;
+        }
+
+        .grundraster{
+            display:grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            min-height:100vh;
+          }
+
+
+            .vertikal{
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              text-align: right;
+
+            }
+
+
+        #sequenz1{
+          background: white;
+
+
+        }
+
+        #sequenz2{
+          background: black;
+
+
+        }
+
+        #sequenz3{
+          background: white;
+
+
+        }
+
+        #sequenz4{
+          background: black;
+
+
+        }
+
+        section {
+            /* background: white; */
+            grid-area: section;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+<section id="sequenz1" class="grundraster">
+   <h2>He</h2>
+   <h2 class="vertikal">doesen't</h2>
+   <h2>fight</h2>
+   <h2>crime</h2>
+   <h2 class="vertikal">or</h2>
+   <h2>wear</h2>
+   <h2>a</h2>
+   <h2>cape</h2>
+
+</section>
+
+<section id="sequenz2" class="grundraster">
+  <h3>He</h3>
+  <h3 class="vertikal">doesen't</h3>
+  <h3>read</h3>
+  <h3>minds</h3>
+  <h3 class="vertikal">or</h3>
+  <h3>levitate</h3>
+
+</section>
+
+<section id="sequenz3" class="grundraster">
+  <h2>But</h2>
+  <h2 class="vertikal">every</h2>
+  <h2>time</h2>
+  <h2>my</h2>
+  <h2 class="vertikal">world</h2>
+  <h2>needs</h2>
+  <h2 class="vertikal">saving</h2>
+
+
+</section>
+
+
+
+<section id="sequenz4" class="grundraster">
+  <h3>He's</h3>
+  <h3 class="vertikal">my</h3>
+  <h3>superman</h3>
+
+
+
+</section>
+
+
+</body>
+</html>

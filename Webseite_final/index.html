@@ -16,19 +16,23 @@
 
         h2 {
           color: black;
+          margin: 0;
+          font-size: 70px;
         }
 
 
         h3 {
           color: white;
+          margin: 0;
+          font-size: 70px;
         }
 
         .grundraster{
             display:grid;
             grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(6, 1fr);
             min-height:100vh;
-            text-align: center;
+            max-height: 100vh;
           }
 
 
@@ -38,6 +42,81 @@
               text-align: right;
 
             }
+
+            /* ––––––– sequenz1 ––––––– */
+
+            .a1 {
+              grid-column: 2 / span 1;
+              grid-row: 2;
+            }
+
+            .b1 {
+              grid-column: 3;
+              grid-row: 2 / span 3;
+
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              text-align: right;
+            }
+
+            .c1 {
+              grid-column: 4 / span 1;
+              grid-row: 3;
+            }
+
+            .d1 {
+              grid-column: 5 / span 1;
+              grid-row: 2;
+            }
+
+            .e1 {
+                grid-column: 6 / span 1;
+                grid-row: 3;
+
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                text-align: right;
+            }
+
+            .f1 {
+              grid-column: 7 / span 1;
+              grid-row: 3;
+            }
+
+            .g1 {
+              grid-column: 7 / span 1;
+              grid-row: 4;
+            }
+
+            .h1 {
+              grid-column: 7 / span 1;
+              grid-row: 5;
+            }
+
+            /* ––––––– sequenz 1 ENDE ––––––– */
+
+
+            /* ––––––– sequenz 2 ––––––– */
+
+            .f2 {
+              grid-column: 6 / span 1;
+              grid-row: 4;
+            }
+            /* ––––––– sequenz1 ENDE ––––––– */
+
+
+            /* ––––––– sequenz 3 ––––––– */
+
+            .g3 {
+              grid-column: 8 / span 1;
+              grid-row: 3;
+
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              text-align: right;
+            }
+
+
 
 
         #sequenz1{
@@ -79,35 +158,35 @@
 
 
 <section id="sequenz1" class="grundraster">
-   <h2>He</h2>
-   <h2 class="vertikal">doesen't</h2>
-   <h2>fight</h2>
-   <h2>crime</h2>
-   <h2 class="vertikal">or</h2>
-   <h2>wear</h2>
-   <h2>a</h2>
-   <h2>cape</h2>
+   <h2 class="a1" >He</h2>
+   <h2 class="b1">doesen't</h2>
+   <h2 class="c1">fight</h2>
+   <h2 class="d1">crime</h2>
+   <h2 class="e1">or</h2>
+   <h2 class="f1">wear</h2>
+   <h2 class="g1">a</h2>
+   <h2 class="h1">cape</h2>
 
 </section>
 
 <section id="sequenz2" class="grundraster">
-  <h3>He</h3>
-  <h3 class="vertikal">doesen't</h3>
-  <h3>read</h3>
-  <h3>minds</h3>
-  <h3 class="vertikal">or</h3>
-  <h3>levitate</h3>
+  <h3 class="a1">He</h3>
+  <h3 class="b1">doesen't</h3>
+  <h3 class="c1">read</h3>
+  <h3 class="d1">minds</h3>
+  <h3 class="e1">or</h3>
+  <h3 class="f2">levitate</h3>
 
 </section>
 
 <section id="sequenz3" class="grundraster">
-  <h2>But</h2>
-  <h2 class="vertikal">every</h2>
-  <h2>time</h2>
-  <h2>my</h2>
-  <h2 class="vertikal">world</h2>
-  <h2>needs</h2>
-  <h2 class="vertikal">saving</h2>
+  <h2 class="a1">But</h2>
+  <h2 class="b1">every</h2>
+  <h2 class="c1">time</h2>
+  <h2 class="d1">my</h2>
+  <h2 class="e1">world</h2>
+  <h2 class="f1">needs</h2>
+  <h2 class="g3">saving</h2>
 
 
 </section>

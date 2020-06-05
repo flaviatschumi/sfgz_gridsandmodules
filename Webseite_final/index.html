@@ -14,6 +14,12 @@
         }
 
 
+        h1 {
+          color: white;
+          margin: 0;
+          font-size: 120px;
+        }
+
         h2 {
           color: black;
           margin: 0;
@@ -43,11 +49,21 @@
 
             }
 
+
+
+
             /* ––––––– sequenz1 ––––––– */
 
             .a1 {
               grid-column: 2 / span 1;
               grid-row: 2;
+              align-self: start;
+              text-align: right;
+              vertical-align: top;
+
+
+              /* align-self: start;
+              justify-self: start; */
             }
 
             .b1 {
@@ -102,7 +118,7 @@
               grid-column: 6 / span 1;
               grid-row: 4;
             }
-            /* ––––––– sequenz1 ENDE ––––––– */
+            /* ––––––– sequenz 2 ENDE ––––––– */
 
 
             /* ––––––– sequenz 3 ––––––– */
@@ -115,8 +131,36 @@
               transform: rotate(180deg);
               text-align: right;
             }
+            /* ––––––– sequenz 3 ENDE ––––––– */
 
 
+
+            /* ––––––– sequenz 4 ––––––– */
+
+            .a4 {
+              grid-column: 3 / span 3;
+              grid-row: 2;
+              text-align: right;
+              /* align-self: start;
+              justify-self: start; */
+            }
+
+            .b4 {
+              grid-column: 5;
+              grid-row: 3 / span 2;
+
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              text-align: right;
+            }
+
+            .c4 {
+              grid-column: 6 / span 1;
+              grid-row: 3 / span 3;
+            }
+
+
+            /* ––––––– sequenz 4 ENDE ––––––– */
 
 
         #sequenz1{
@@ -194,9 +238,9 @@
 
 
 <section id="sequenz4" class="grundraster">
-  <h3>He's</h3>
-  <h3 class="vertikal">my</h3>
-  <h3>superman</h3>
+  <h1 class="a4">He's</h3>
+  <h1 class="b4">my</h3>
+  <h1 class="c4">superman</h3>
 
 
 

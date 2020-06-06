@@ -80,7 +80,7 @@
               text-align: right;
               vertical-align: top;
               line-height: 75%;
-
+                animation: right 4s;
 
             }
 
@@ -358,28 +358,30 @@
 
         @keyframes left {
           from {
-            margin-left: 200vh;
+              transform: translate(200vh, 0);
+            /*margin-left: 200vh;*/
             width: 300%;
           }
 
           to {
-            margin-left: 0%;
+            /*margin-left: 0%;*/
+              transform: translate(0, 0);
             width: 100%;
           }
         }
 
 
-        /* @keyframes right {
+        @keyframes right {
           from {
-            margin-right: 200vh;
+              transform: translate(-200vh, 0);
             width: 300%;
           }
 
           to {
-            margin-right: 0%;
+              transform: translate(0, 0);
             width: 100%;
           }
-        } */
+        }
 
 
 

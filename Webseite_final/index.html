@@ -63,8 +63,8 @@
             grid-template-rows: repeat(10, 1fr);
             grid-gap: 1vh;
             /* grid-gap: 20px; */
-            min-height:105vh;
-            max-height: 105vh;
+            min-height:100vh;
+            max-height: 100vh;
           }
 
 
@@ -103,22 +103,27 @@
             }
 
             .isinview .a1{
-              animation: right 1s;
+              animation: right 1.5s;
             }
 
 
             .b1 {
+              transform: translate(0, -200vh) rotate(180deg);
+
               grid-column: 5;
-              grid-row: 3 / span 5;
+              grid-row: 3 / span 3;
 
               writing-mode: vertical-rl;
-              transform: rotate(180deg);
               text-align: right;
+
+              opacity:0;
 
             }
 
             .isinview .b1{
-              animation: top 2s;
+              animation: top 3.5s;
+              animation-fill-mode: forwards;
+
             }
 
             .c1 {
@@ -142,16 +147,22 @@
             }
 
             .e1 {
+              transform: translate(0, 200vh) rotate(180deg);
+
                 grid-column: 9 / span 1;
                 grid-row: 5;
 
                 writing-mode: vertical-rl;
-                transform: rotate(180deg);
                 text-align: right;
+
+                opacity: 0;
+
             }
 
             .isinview .e1{
               animation: bottom 4s;
+              animation-fill-mode: forwards;
+
             }
 
 
@@ -180,7 +191,7 @@
             }
 
             .isinview .h1{
-              animation: left 5.5s;
+              animation: left 6s;
             }
 
             /* ––––––– sequenz 1 ENDE ––––––– */
@@ -217,7 +228,7 @@
             }
 
             .isinview .b2{
-              animation: top 2s;
+              animation: top 3.5s;
               /*animation-delay: 2s;*/
                 animation-fill-mode: forwards;
             }
@@ -244,16 +255,22 @@
             }
 
             .e2 {
+              transform: translate(0, 200vh) rotate(180deg);
+
                 grid-column: 9 / span 1;
                 grid-row: 6;
 
                 writing-mode: vertical-rl;
-                transform: rotate(180deg);
                 text-align: right;
+
+                opacity:0;
+
             }
 
             .isinview .e2{
                 animation: bottom 5s;
+                animation-fill-mode: forwards;
+
             }
 
 
@@ -396,7 +413,7 @@
               grid-column: 6 / span 5;
               grid-row: 6 / span 1;
 
-              line-height: 80%;
+              line-height: 15%;
 
 
             }
@@ -439,10 +456,23 @@
 
             .a7 {
               grid-column: 3 / span 10;
-              grid-row: 2 / span 7;
-              text-align: center;
+              grid-row: 4 / span 1;
+              text-align: left;
             }
 
+            .isinview .a7{
+              animation: right 3s;
+            }
+
+            .b7 {
+              grid-column: 3 / span 10;
+              grid-row: 6 / span 1;
+              text-align: right;
+            }
+            .isinview .b7{
+              animation: left 5s;
+
+            }
 
 
             /* ––––––– sequenz 7 ENDE ––––––– */
@@ -453,33 +483,18 @@
 
 
             .a8 {
+              transform: translate(0, 200vh) rotate(-180deg);
+
               grid-column: 2 / span 12;
               grid-row: 5;
               text-align: center;
+              }
 
-              position: relative;
-font-family: sans-serif;
-/* text-transform: uppercase; */
-letter-spacing: 4px;
-font-size: 5vh;
-/* overflow: hidden; */
-background: linear-gradient(90deg, #000, #fff, #000);
-background-repeat: no-repeat;
-background-size: 80%;
-animation: animate 4s linear infinite;
--webkit-background-clip: text;
--webkit-text-fill-color: rgba(255, 255, 255, 0);
-}
+              .isinview .a8{
+                animation: vonunten 5s ;
+                animation-fill-mode: forwards;
 
-@keyframes animate {
-0% {
-  background-position: -500%;
-}
-100% {
-  background-position: 500%;
-}
-}
-
+              }
 
 
             /* ––––––– sequenz 8 ENDE ––––––– */
@@ -517,7 +532,7 @@ animation: animate 4s linear infinite;
 
 
         #sequenz0{
-              background: #2e2e31;
+              background: black;
             }
 
         #sequenz1{
@@ -602,13 +617,17 @@ animation: animate 4s linear infinite;
 
         @keyframes bottom {
           from {
-              transform: translate(0, 200vh);
+              transform: translate(0, 200vh) rotate(180deg);
             width: 100%;
+            opacity:1;
+
           }
 
           to {
-              transform: translate(0, 0);
+              transform: translate(0, 0) rotate(180deg);
             width: 100%;
+            opacity:1;
+
           }
         }
 
@@ -629,7 +648,18 @@ animation: animate 4s linear infinite;
 
 
 
+        @keyframes vonunten {
+          from {
+              transform: translate(0, 200vh) ;
+            width: 100%;
 
+          }
+
+          to {
+              transform: translate(0, 0) ;
+            width: 100%;
+          }
+        }
 
 
 
@@ -728,8 +758,8 @@ animation: animate 4s linear infinite;
         }
 
         a {
-          color: #fffbf1;
-          text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+          color: white;
+          text-shadow: 0 20px 25px black, 0 40px 60px black;
           font-size: 80px;
           font-weight: bold;
           text-decoration: none;
@@ -762,7 +792,7 @@ animation: animate 4s linear infinite;
 
         a:after {
           border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #A8A8A8 #A8A8A8;
-          box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+          box-shadow: 25px 25px 25px rgba(20, 20, 23, .8);
         }
 
 
@@ -779,7 +809,7 @@ animation: animate 4s linear infinite;
 
 
 
-
+/*
 .rotate-scale-down{-webkit-animation:rotate-scale-down 2s cubic-bezier(.075,.82,.165,1.000) 1s infinite both;animation:rotate-scale-down 2s cubic-bezier(.075,.82,.165,1.000) 1s infinite both}
 
 
@@ -795,7 +825,7 @@ animation: animate 4s linear infinite;
 
 @-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
 
-
+ */
 
 
 
@@ -822,7 +852,7 @@ animation: animate 4s linear infinite;
 
 
 
-<section id="sequenz1" class="grundraster checkview">
+<section id="sequenz1" class="grundraster checkview" data-attr-offset="300">
    <h2 class="a1" >He</h2>
    <h2 class="b1">doesn't</h2>
    <h2 class="c1">fight</h2>
@@ -847,7 +877,7 @@ animation: animate 4s linear infinite;
 </section>
 
 
-<section id="sequenz3" class="grundraster checkview">
+<section id="sequenz3" class="grundraster checkview" data-attr-offset="300">
   <h2 class="a3">But</h2>
   <h2 class="b3">every</h2>
   <h2 class="c3">time</h2>
@@ -859,7 +889,7 @@ animation: animate 4s linear infinite;
 </section>
 
 
-<section id="sequenz4" class="grundraster checkview">
+<section id="sequenz4" class="grundraster checkview" data-attr-offset="300">
   <h1 class="a4">He's</h3>
   <h1 class="b4">my</h3>
   <h1 class="c4">superman</h3>
@@ -868,12 +898,12 @@ animation: animate 4s linear infinite;
 
 
 
-<section id="sequenz5" class="grundraster checkview">
+<section id="sequenz5" class="grundraster checkview" data-attr-offset="300">
   <h5 class="a5">He <span id="spin"></span></h5>
 
 </section>
 
-<section id="sequenz6" class="grundraster checkview">
+<section id="sequenz6" class="grundraster checkview" data-attr-offset="300">
 
   <div id=containerflip class="a6">
   Some folks don't believe in
@@ -887,14 +917,13 @@ animation: animate 4s linear infinite;
 
 </section>
 
-<section id="sequenz7" class="grundraster checkview">
 
 
+<section id="sequenz7" class="grundraster checkview" data-attr-offset="300">
 
 
-
-<h5 class="a7">And you could say he's a man of few </br> </br><div class=" rotate-scale-down">words</div> </br></br></br>
-But he talks a lot </br></br> <div class ="scale-up-center">within </div></h5>
+<h5 class="a7">And you could say he's a man of few words</h5>
+<h5 class="b7">But he talks a lot within </h5>
 
 
 </section>
@@ -902,14 +931,14 @@ But he talks a lot </br></br> <div class ="scale-up-center">within </div></h5>
 
 
 
-<section id="sequenz8" class="grundraster checkview">
+<section id="sequenz8" class="grundraster checkview" data-attr-offset="300">
 <h1 class="a8">I still look up to him</h1>
 
 
 </section>
 
 
-<section id="sequenz9" class="grundraster checkview">
+<section id="sequenz9" class="grundraster checkview" data-attr-offset="300">
   <h4 class="a9">Impressum </h4>
   <p class="b9">Design & Code: Flavia Tschumi </br>
   Quellenverweis: Not all heros wears capes – Owl City   </br>

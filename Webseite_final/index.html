@@ -205,19 +205,21 @@
             }
 
             .b2 {
-              transform: translate(0, -200vh);
+              transform: translate(0, -200vh) rotate(180deg);
 
               grid-column: 5;
               grid-row: 4 / span 5;
 
               writing-mode: vertical-rl;
-              transform: rotate(180deg);
               text-align: right;
+
+                opacity:0;
             }
 
             .isinview .b2{
               animation: top 2s;
-              animation-delay: 2s;
+              /*animation-delay: 2s;*/
+                animation-fill-mode: forwards;
             }
 
             .c2 {
@@ -576,6 +578,7 @@ animation: animate 4s linear infinite;
           from {
               transform: translate(200vh, 0);
             width: 100%;
+
           }
 
           to {
@@ -614,11 +617,13 @@ animation: animate 4s linear infinite;
           from {
               transform: translate(0, -200vh) rotate(180deg);
               width: 100%;
+              opacity:1;
           }
 
           to {
               transform: translate(0, 0) rotate(180deg);
               width: 100%;
+              opacity:1;
           }
         }
 
@@ -830,7 +835,7 @@ animation: animate 4s linear infinite;
 </section>
 
 
-<section id="sequenz2" class="grundraster checkview">
+<section id="sequenz2" class="grundraster checkview" data-attr-offset="300">
   <h3 class="a2">He</h3>
   <h3 class="b2">doesn't</h3>
   <h3 class="c2">read</h3>
@@ -915,7 +920,7 @@ But he talks a lot </br></br> <div class ="scale-up-center">within </div></h5>
 
 </body>
 
-<script src="./styles/viewport.js" ></script>
+<script src="./styles/viewport2.js" ></script>
 
 
 </html>
